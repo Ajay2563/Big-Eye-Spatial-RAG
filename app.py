@@ -26,6 +26,9 @@ llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
 # 2. API SETUP
 app = FastAPI()
 
+from mangum import Mangum
+handler = Mangum(app) # This allows AWS Lambda to run FastAPI
+
 # This allows your mobile browser to talk to this script
 app.add_middleware(
     CORSMiddleware, 
