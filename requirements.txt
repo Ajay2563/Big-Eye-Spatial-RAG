@@ -8,3 +8,4 @@ langchain-google-genai
 chromadb
 pypdf
 sentence-transformers
+mangum
